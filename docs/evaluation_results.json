@@ -1,0 +1,44 @@
+[
+  {
+    "name": "regex_baseline",
+    "accuracy": 0.6361757105943152,
+    "precision": 1.0,
+    "recall": 0.3747779751332149,
+    "f1": 0.5452196382428941,
+    "false_positive_rate": 0.0,
+    "mean_latency_ms": 0.40902601549932366,
+    "p95_latency_ms": 1.7617903999280315,
+    "n_samples": 1935,
+    "confusion_matrix": [
+      [
+        809,
+        0
+      ],
+      [
+        704,
+        422
+      ]
+    ]
+  },
+  {
+    "name": "detector[heuristic-fallback]",
+    "accuracy": 0.6516795865633075,
+    "precision": 1.0,
+    "recall": 0.40142095914742454,
+    "f1": 0.5728770595690748,
+    "false_positive_rate": 0.0,
+    "mean_latency_ms": 0.7438889963854195,
+    "p95_latency_ms": 3.0845625999518234,
+    "n_samples": 1935,
+    "confusion_matrix": [
+      [
+        809,
+        0
+      ],
+      [
+        674,
+        452
+      ]
+    ]
+  }
+]
