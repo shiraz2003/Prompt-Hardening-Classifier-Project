@@ -1,28 +1,36 @@
-"""Prompt Hardening Classifier package.
+"""
+Prompt Hardening Classifier Package
 
-A real-time middleware for detecting and mitigating prompt injection
-attacks against LLMs, with special focus on emoji smuggling and
-Unicode obfuscation techniques.
+A comprehensive security middleware for detecting and mitigating:
+- Prompt injection attacks
+- Unicode smuggling (tag-blocks, variation selectors, zero-width chars)
+- Homoglyph obfuscation
+- Bidirectional override attacks
+- Harmful content (violence, drugs, illegal activities)
 
+Features:
+- Multi-layer detection (Rules-Based + ML)
+- Real-time sanitization
+- Detailed attack logging
+- Transparent defense mechanisms
+
+Project: PUSL3190 — Prompt Hardening Classifier
 Author: Shiraz Sappideen (Plymouth Index 10952638)
-Project: PUSL3190 Computing Project
 """
 
-from .sanitizer import Sanitizer, SanitizationResult
-from .unicode_features import extract_features, FEATURE_NAMES
-from .regex_baseline import RegexBaselineClassifier
-from .detector import PromptDetector, DetectionResult
+# Import core classes from submodules (NOT from self!)
 from .pipeline import HardeningPipeline
+from .detector import PromptDetector
+from .sanitizer import Sanitizer
 
-__all__ = [
-    "Sanitizer",
-    "SanitizationResult",
-    "extract_features",
-    "FEATURE_NAMES",
-    "RegexBaselineClassifier",
-    "PromptDetector",
-    "DetectionResult",
-    "HardeningPipeline",
-]
-
+# Package metadata
 __version__ = "1.0.0"
+__author__ = "Shiraz Sappideen"
+__project__ = "PUSL3190 - Prompt Hardening Classifier"
+
+# Public API
+__all__ = [
+    "HardeningPipeline",
+    "PromptDetector",
+    "Sanitizer",
+]
