@@ -98,7 +98,7 @@ uvicorn api.main:app --reload --port 8000
 # Then visit http://localhost:8000/docs
 
 # 6. Run the Gradio demo
-python -m ui.gradio_app
+python -m ui.chatbot_app
 # Open http://localhost:7860
 ```
 
